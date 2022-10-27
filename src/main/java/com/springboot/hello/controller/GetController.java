@@ -7,7 +7,7 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/api/v1/get-api")  // 스프링이 이걸 찾는다 , HTTP의 모든요청을 받는다
-public class HelloController {
+public class GetController {
 
     @RequestMapping(value = "/hello", method = RequestMethod.GET)//요청형식 GET만 받음
     public String hello() {
