@@ -37,6 +37,14 @@ public class HelloController {
         return name + " " + email + " " + organization;
     }
 
+    @GetMapping(value = "/request2")
+    public String getRequestParam2(
+            @RequestParam Map<String, String> param) {//어떤 값이 들어올지 모를때
+        param.entrySet().forEach(map ->
+                System.out.printf("key:%s value:%s\n", map.getKey(), map.getValue()));
+        return "request2가 호출 완료 되었습니다";
+    }
+
 
 
 }
